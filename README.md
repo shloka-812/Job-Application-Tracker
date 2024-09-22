@@ -1,4 +1,4 @@
-# Job Tracker Project
+# Job Application Tracker Project
 
 The **Job Tracker** project is designed to help users manage and track their job applications efficiently. It integrates multiple AWS services to provide a scalable, efficient, and reliable solution. The project architecture is entirely serverless, utilizing AWS services for storage, processing, and deployment.
 

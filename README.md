@@ -1,11 +1,11 @@
-# Job Application Tracker Project
+# CareerSync - a job application tracker project
 
-The **Job Tracker** project is designed to help users manage and track their job applications efficiently. It integrates multiple AWS services to provide a scalable, efficient, and reliable solution. The project architecture is entirely serverless, utilizing AWS services for storage, processing, and deployment.
+The **CareerSync** project is designed to help users manage and track their job applications efficiently. It integrates multiple AWS services to provide a scalable, efficient, and reliable solution. The project architecture is entirely serverless, utilizing AWS services for storage, processing, and deployment.
 
 
 ## Project Overview
 
-The Job Tracker application allows users to:
+This application allows users to:
 - Add job postings manually or extract key details from documents.
 - Upload their resume and automatically match it with job descriptions.
 - Use AWS Comprehend to extract keywords from both the resume and job descriptions, finding similarity between the two and identifying keyword matches.

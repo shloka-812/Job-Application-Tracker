@@ -1,0 +1,21 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+## Node.js / React build artifacts ##
+frontend/jobtracker/node_modules/
+frontend/jobtracker/build/
+frontend/jobtracker/.env.*
+frontend/jobtracker/npm-debug.log*
+frontend/jobtracker/yarn-debug.log*
+frontend/jobtracker/yarn-error.log*
+.pnp.js
+
+## Python / Lambda Layer artifacts ##
+backend/python/
+backend/*.zip
+__pycache__/
+*.pyc
+
+## Misc / System Files ##
+.DS_Store
+.vscode/
+.idea/

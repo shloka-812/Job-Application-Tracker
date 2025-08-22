@@ -36,7 +36,7 @@ def lambda_handler(event, context):
         # Decode the Base64 encoded resume file
         decode_pdf = base64.b64decode(pdfFile)
         # Upload the resume file to the S3 bucket
-        bucket_name = 'resumebucket2607'
+        bucket_name = 'shlokapandya-resumebucket'
         file_name = f"{username}/{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}.pdf"
         s3.put_object(Bucket=bucket_name, Key=file_name, Body=decode_pdf)
 
@@ -59,7 +59,9 @@ def lambda_handler(event, context):
         return {
             'statusCode': 200,
             'headers': {
-             'Access-Control-Allow-Origin': '*'
+             'Access-Control-Allow-Origin': '*',
+             'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+             'Access-Control-Allow-Methods': 'OPTIONS,GET,POST,PUT,DELETE'
            },
             'body': json.dumps({'message': 'Job application details saved successfully'}),
         
@@ -69,7 +71,9 @@ def lambda_handler(event, context):
         return {
             'statusCode': 500,
             'headers': {
-             'Access-Control-Allow-Origin': '*'
+             'Access-Control-Allow-Origin': '*',
+             'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+             'Access-Control-Allow-Methods': 'OPTIONS,GET,POST,PUT,DELETE'
            },
             'body': json.dumps({'error': str(e)}),
         }

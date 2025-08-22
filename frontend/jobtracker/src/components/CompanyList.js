@@ -79,8 +79,8 @@ const CompanyList = ({ companies,onEdit,onDelete }) => {
           </tr>
         </thead>
         <tbody>
-          {companies.map((company, index) => (
-            <tr key={index}>
+            {(companies || []).map((company, index) => (
+              <tr key={index}>
               <td style={{ textAlign: "center" }}>{company.companyName}</td>
               <td style={{ textAlign: "center" }}>{company.position}</td>
               <td style={{ textAlign: "center" }}>{company.appliedDate}</td>
@@ -151,11 +151,11 @@ const CompanyList = ({ companies,onEdit,onDelete }) => {
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <div style={{ width: '48%' }}>
                 <h3 style={{ color: '#008080' }}>Resume Phrases</h3>
-                {renderPhraseList(modalContent.resume_phrases)}
+                {renderPhraseList(modalContent.resume_phrases || [])}
               </div>
               <div style={{ width: '48%' }}>
                 <h3 style={{ color: '#008080' }}>Job Description Phrases</h3>
-                {renderPhraseList(modalContent.job_description_phrases)}
+                {renderPhraseList(modalContent.job_description_phrases || [])}
               </div>
             </div>
           </div>
